@@ -6,7 +6,7 @@
 # build production
 yarn run build
 
-# run fix:prettier fix:eslint 
+# run fix:prettier fix:eslint
 yarn run fix
 
 # jest test
@@ -25,11 +25,12 @@ yarn run storybook:build
 yarn run publish
 ```
 
-
-
 ## version
 
 node >= 10
 
 react >= 16.8
 
+## husky
+
+> npx husky install .husky
