@@ -1,2 +1,2 @@
 export * from './components/HelloWorld';
-export { default as Text } from './components/HelloWorld';
+export { default as HelloWorld } from './components/HelloWorld';

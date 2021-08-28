@@ -3,9 +3,9 @@ import { render, screen } from '@testing-library/react';
 import React from 'react';
 import HelloWorld from './HelloWorld';
 
-test('render Text component', () => {
-  render(<HelloWorld value="test" />);
+test('render HelloWorld component', () => {
+  render(<HelloWorld value="HelloWorld" />);
 
-  const text = screen.getByText(/test/i);
+  const text = screen.getByText(/HelloWorld/i);
   expect(text).toBeInTheDocument();
 });
