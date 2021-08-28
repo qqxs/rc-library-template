@@ -1,5 +1,7 @@
 # rc-library-template
 
+![workflow](https://github.com/qqxs/rc-library-template/actions/workflows/cl.yml/badge.svg)
+
 ## Use
 
 ```bash
