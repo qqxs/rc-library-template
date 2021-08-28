@@ -17,3 +17,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
+          # github > Setting > Pages > Source
+          # select branch `gh-pages`
+          # select folder `root`
+
+
