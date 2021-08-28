@@ -6,7 +6,7 @@ import packageJson from './package.json';
 
 // 驼峰
 function toCamel(name) {
-  return name.replace(/\-(\w)/g, function (all, letter) {
+  return name.replace(/-(\w)/g, function (all, letter) {
     return letter.toUpperCase();
   });
 }
