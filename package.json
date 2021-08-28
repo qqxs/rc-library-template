@@ -1,0 +1,106 @@
+{
+  "name": "rc-library-template",
+  "version": "0.1.1",
+  "description": "react component library template",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "iife": "dist/index.iife.js",
+  "umd": "dist/index.umd.js",
+  "scripts": {
+    "build": "rollup -c",
+    "fix": "run-s fix:prettier fix:eslint",
+    "fix:eslint": "npm run lint:eslint -- --fix",
+    "fix:prettier": "npm run lint:prettier -- --write",
+    "lint": "run-p -l -c --aggregate-output lint:*",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook -o docs",
+    "prepublish": "npm run build",
+    "publish": "npm publish"
+  },
+  "files": [
+    "dist/src",
+    "dist/index.js",
+    "dist/index.js.map",
+    "src",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "react-dom",
+    "component",
+    "typescript",
+    "eslint",
+    "rollup",
+    "library",
+    "template"
+  ],
+  "author": "ShineShao <xiaoshaoqq@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qqxs/rc-library-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qqxs/rc-library-template/issues"
+  },
+  "homepage": "https://github.com/qqxs/rc-library-template#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.17",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@storybook/addon-actions": "^6.1.18",
+    "@storybook/addon-essentials": "^6.1.18",
+    "@storybook/addon-links": "^6.1.18",
+    "@storybook/react": "^6.1.18",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.9.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.1.5",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "jest": "^26.6.3",
+    "lint-staged": "^11.1.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rollup": "^2.39.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-jest": "^26.5.1",
+    "typescript": "^4.1.5"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.x",
+    "react-dom": ">= 16.8.x"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "lint-staged": {
+    "*.+(ts|tsx|js|jsx)": [
+      "prettier --write",
+      "eslint ."
+    ],
+    "*.+(json|css|scss|md|mdx)": [
+      "prettier --write"
+    ]
+  }
+}
