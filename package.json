@@ -6,8 +6,9 @@
   "module": "dist/index.es.js",
   "iife": "dist/index.iife.js",
   "umd": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rimraf dist/* && rollup -c",
     "fix": "run-s fix:prettier fix:eslint",
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "npm run lint:prettier -- --write",
@@ -21,9 +22,7 @@
     "publish": "npm publish"
   },
   "files": [
-    "dist/src",
-    "dist/index.js",
-    "dist/index.js.map",
+    "dist",
     "src",
     "package.json",
     "README.md"
@@ -81,6 +80,7 @@
     "prettier": "^2.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "rimraf": "^3.0.2",
     "rollup": "^2.39.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.30.0",
