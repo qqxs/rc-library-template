@@ -19,6 +19,11 @@ const banner = `/*
 * Released under the MIT License.
 */`;
 
+const outputGlobals = {
+  react: 'React',
+  'react-dom': 'ReactDOM'
+};
+
 export default {
   input: './src/index.ts',
   output: [
@@ -39,15 +44,18 @@ export default {
       format: 'iife',
       sourcemap: true,
       name,
-      banner
+      banner,
+      globals: outputGlobals
     },
     {
       file: packageJson.umd,
       format: 'umd',
       sourcemap: true,
       name,
-      banner
+      banner,
+      globals: outputGlobals
     }
   ],
   plugins: [peerDepsExternal(), resolve(), commonjs(), typescript()]
+  // external: ['react', 'react-dom']
 };
