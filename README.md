@@ -1,6 +1,9 @@
 # rc-library-template
 
 ![workflow](https://github.com/qqxs/rc-library-template/actions/workflows/cl.yml/badge.svg)
+![Download](https://img.shields.io/npm/dm/rc-library-template.svg)
+![Version](https://img.shields.io/npm/v/rc-library-template.svg)
+![License](https://img.shields.io/npm/l/rc-library-template.svg)
 
 ## Use
 
@@ -36,3 +39,7 @@ react >= 16.8
 ## husky
 
 > npx husky install .husky
+
+## License
+
+MIT © [Shine Shao](https://github.com/freeshineit)
